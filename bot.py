@@ -1,7 +1,9 @@
+import os
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 
-TOKEN = "8477157715:AAHpa85swihvZlGpjU7P8Jnh2-R1MnmJ6ug"
+# ✅ توکن از Environment Variable گرفته میشه، دیگه تو کد نیست
+TOKEN = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
